@@ -109,14 +109,19 @@ Reset removes all browser given styles. Normalizing sets a base starting point f
 * What are the various clearing techniques and which is appropriate for what context?
 * Explain CSS sprites, and how you would implement them on a page or site.
 * What are your favourite image replacement techniques and which do you use when?
+
+
+##### My favorite image replacement technique is the App Shell Method, designed by Google. I use it when I have sections of a website that will eventually be populated with data, but when I don't want to show just a blank screen. This increases user experience and retention.
+
+
 * How would you approach fixing browser-specific styling issues?
-I would use vendor-specific css tags. Though from the beginning, I would have used sass and with @include, that encompasses vendor prefixes.
+I would use vendor-specific css tags. 
 
 * How do you serve your pages for feature-constrained browsers?
-  * What techniques/processes do you use?
+* What techniques/processes do you use?
 * What are the different ways to visually hide content (and make it available only for screen readers)?
 * Have you ever used a grid system, and if so, what do you prefer?
-I have used Bootstraps grid system, though I far prefer css grid as it's free in terms of performance. 
+I have used Bootstraps grid system, though I far prefer css grid as that's just one less CDN that I need to bring in, which will decrease load page loading time.
 
 * Have you used or implemented media queries or mobile specific layouts/CSS?
 I have. Mobile First is the way to go!
@@ -126,18 +131,29 @@ I have. Mobile First is the way to go!
 * What are some of the "gotchas" for writing efficient CSS?
 Keeping dry! 
 * What are the advantages/disadvantages of using CSS preprocessors?
-  * Describe what you like and dislike about the CSS preprocessors you have used.
+* Describe what you like and dislike about the CSS preprocessors you have used.
 * How would you implement a web design comp that uses non-standard fonts?
 * Explain how a browser determines what elements match a CSS selector.
 * Describe pseudo-elements and discuss what they are used for.
 * Explain your understanding of the box model and how you would tell the browser in CSS to render your layout in different box models.
+
+
 * What does ```* { box-sizing: border-box; }``` do? What are its advantages?
+
+Border box will include padding and border in the width and height of an element.
+
 * List as many values for the display property that you can remember.
+block, inline-block, flex, inline-flex, inline, table, grid, none
+
 * What's the difference between inline and inline-block?
+You can add height and width to inline-block;
+
 * What's the difference between a relative, fixed, absolute and statically positioned element?
 * The 'C' in CSS stands for Cascading.  How is priority determined in assigning styles (a few examples)?  How can you use this system to your advantage?
+
+
 * What existing CSS frameworks have you used locally, or in production? How would you change/improve them?
-I have used Bootstrap, Tiny and MDBootstrap.
+I have used Bootstrap, Tiny, Propeller and MDBootstrap.
 
 
 * Have you played around with the new CSS Flexbox or Grid specs?
@@ -150,8 +166,13 @@ Yes! It's the best.
 #### JS Questions:
 
 * Explain event delegation
+##### Event delegation allows us to attach a single event listener, to a parent element, that will fire for all descendants matching a selector.
+
+
 * Explain how `this` works in JavaScript
 * Explain how prototypal inheritance works
+
+
 * What do you think of AMD vs CommonJS?
 * Explain why the following doesn't work as an IIFE: `function foo(){ }();`.
   * What needs to be changed to properly make it an IIFE?
