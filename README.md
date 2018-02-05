@@ -67,7 +67,6 @@ Progressive Web Apps!
 
 * Explain some of the pros and cons for CSS animations versus JavaScript animations.
 
-
 * What does CORS stand for and what issue does it address?
 Cross Origin Resource Sharing. CORS allows you to access resources from a server on a different domain.
 
@@ -202,19 +201,54 @@ Yes! It's the best.
 * Explain the same-origin policy with regards to JavaScript.
 * Make this work:
 ```javascript
+function duplicate(arr){
+  return arr.concat(arr);
+}
+
 duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
 ```
 * Why is it called a Ternary expression, what does the word "Ternary" indicate?
+A ternary is syntactic sugar on a conditional statement. Instead of using if and then, you'd use ? and :
+
+if ? then : else
+
+Ternary indicates there are three sections.
+
 * What is `"use strict";`? what are the advantages and disadvantages to using it?
 * Create a for loop that iterates up to `100` while outputting **"fizz"** at multiples of `3`, **"buzz"** at multiples of `5` and **"fizzbuzz"** at multiples of `3` and `5`
+
+```javascript
+function fizzBuzz(num) {
+	let count = 0;
+	while (count <= num) {
+		if (!(count % 5) && !(count % 3) && count) {
+			console.log('fizzbuzz');
+		} else if (!(count % 3)) {
+			console.log('fizz');
+		} else if (!(count % 5)) {
+			console.log('buzz');
+		}
+		count++;
+	}
+}
+```
+
 * Why is it, in general, a good idea to leave the global scope of a website as-is and never touch it?
 * Why would you use something like the `load` event? Does this event have disadvantages? Do you know any alternatives, and why would you use those?
 * Explain what a single page app is and how to make one SEO-friendly.
 * What is the extent of your experience with Promises and/or their polyfills?
+I am well versed in Promises, asynchronous programming is a daily tool that I utilize. 
+
 * What are the pros and cons of using Promises instead of callbacks?
+
 * What are some of the advantages/disadvantages of writing JavaScript code in a language that compiles to JavaScript?
+
 * What tools and techniques do you use debugging JavaScript code?
+I use the chrome console along with React DevTools, Redux DevTools, and breakpoints.
+
 * What language constructions do you use for iterating over object properties and array items?
+For in loops, map, reduce, filter, for each, every and I try to avoid standard for loops whenever possible.
+
 * Explain the difference between mutable and immutable objects.
   * What is an example of an immutable object in JavaScript?
   * What are the pros and cons of immutability?
@@ -222,8 +256,13 @@ duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
 * Explain the difference between synchronous and asynchronous functions.
 * What is event loop?
   * What is the difference between call stack and task queue?
+  
 * Explain the differences on the usage of `foo` between `function foo() {}` and `var foo = function() {}`
+
 * What are the differences between variables created using `let`, `var` or `const`?
+`var` is function scope, `let` and `const` are block scope. 
+`const` means that the variable can't be reassigned. 
+`let` and `var` can be reassigned.
 
 #### Testing Questions:
 
